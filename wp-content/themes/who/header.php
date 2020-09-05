@@ -73,7 +73,7 @@
 					<div class="menu-item">
 						<a href="#">
 							<div class="menu-item__icon">
-								<?php //echo file_get_contents(TU_IMG_DIR . 'icons/account.svg'); ?>
+							<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/account.svg">
 							</div>
 
 							<div>My Account</div>
@@ -85,7 +85,7 @@
 							<div>Menu</div>
 
 							<div class="menu-item__icon">
-								<?php //echo file_get_contents(TU_IMG_DIR . 'icons/hamburger.svg'); ?>
+							<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/hamburger.svg">
 							</div>
 						</a>
 					</div>
@@ -96,7 +96,7 @@
 						<li class="menu-item mobile-hide">
 							<a href="#">
 								<div class="menu-item__icon">
-									<?php// echo file_get_contents(TU_IMG_DIR . 'icons/account.svg'); ?>
+                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/account.svg">
 								</div>
 
 								<div>My Account</div>
@@ -105,7 +105,7 @@
 						<li class="menu-item">
 							<a href="#">
 								<div class="menu-item__icon">
-									<?php // echo file_get_contents(TU_IMG_DIR . 'icons/logout.svg'); ?>
+								<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/logout.svg">
 								</div>
 
 								<div>Logout</div>
@@ -116,7 +116,7 @@
 							<a href="#">
 								English
 								<span class="menu-item__icon">
-									<?php //echo file_get_contents(TU_IMG_DIR . 'icons/caret-down.svg'); ?>
+									<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/caret-down.svg">
 								</span>
 							</a>
 
@@ -141,7 +141,7 @@
 							<a href="#">
 								School
 								<span class="menu-item__icon">
-									<?php //echo file_get_contents(TU_IMG_DIR . 'icons/caret-down-deep.svg'); ?>
+                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/caret-down-deep.svg">
 								</span>
 							</a>
 
@@ -168,7 +168,7 @@
 							<a href="#">
 								Elections
 								<span class="menu-item__icon">
-									<?php //echo file_get_contents(TU_IMG_DIR . 'icons/caret-down-deep.svg'); ?>
+                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/caret-down-deep.svg">
 								</span>
 							</a>
 

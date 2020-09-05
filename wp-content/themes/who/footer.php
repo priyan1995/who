@@ -1,13 +1,15 @@
 
-<footer class="site-footer bg-light-blue">
+<footer class="site-footer bg-light-blue pd-footer">
 	<div class="site-footer__inner section section--large">
 		<ul class="social">
 			<li class="social__item social__item--facebook">
-				<a href="#" target="_blank"><?php //echo file_get_contents(TU_IMG_DIR . 'icons/facebook.svg'); ?></a>
+				<a href="#" target="_blank">
+				<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/facebook.svg"></a>
 			</li>
 
 			<li class="social__item social__item--twitter">
-				<a href="#" target="_blank"><?php //echo file_get_contents(TU_IMG_DIR . 'icons/twitter.svg'); ?></a>
+				<a href="#" target="_blank">
+				<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/twitter.svg"></a>
 			</li>
 		</ul>
 
