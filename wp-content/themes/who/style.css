@@ -1077,11 +1077,12 @@ button,
 }
 
 .grid--spaced .grid__col--4 {
-    width: 31.6%
+    width: 30.6%
 }
 
 .grid--spaced .grid__col--4:not(:last-of-type) {
-    margin-right: 2.6%
+    margin-right: 2.6%;
+    margin-bottom: 2.6%;
 }
 
 .grid__col--5 {

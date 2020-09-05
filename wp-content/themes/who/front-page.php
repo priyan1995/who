@@ -12,8 +12,8 @@ the_post();
 <div class="site-header-spacer"></div>
 
 <section class="site-banner site-banner--dashboard">
-    <div class="section section--large">      
-    <h1><?php the_field('main_title'); ?></h1>
+    <div class="section section--large">
+        <h1><?php the_field('main_title'); ?></h1>
     </div>
 </section>
 
@@ -51,79 +51,43 @@ the_post();
     </div>
 
     <div class="section section--large grid grid--spaced">
-        <article class="event grid__col grid__col--4 grid__col--tb2-12 grid__col--m-12">
-            <div class="event__img" style="background-image: url(http://via.placeholder.com/348x240);"></div>
 
-            <a class="event__tag txt-upper" href="#">Courses</a>
+        <?php
+        $cours_event = new WP_Query(array('orderby' => 'date', 'post_type' => 'courses__events', 'order' => 'ASC'));
+        if ($cours_event->have_posts()) :
+            while ($cours_event->have_posts()) :
+                $cours_event->the_post();
 
-            <div class="event__txt spacing-small-all post-styles">
-                <h3 class="event__title txt-light">WHO traning &amp; education</h3>
+        ?>
 
-                <a class="btn btn--light" href="#">More info</a>
-            </div>
-        </article>
+                <article class="event grid__col grid__col--4 grid__col--tb2-12 grid__col--m-12">
+                    <div class="event__img" style="background-image: url(<?php the_field('image'); ?>);"></div>
 
-        <article class="event grid__col grid__col--4 grid__col--tb2-12 grid__col--m-12">
-            <div class="event__img" style="background-image: url(http://via.placeholder.com/348x240);"></div>
+                    <a class="event__tag txt-upper" href="<?php the_field('category_link'); ?>">
 
-            <a class="event__tag txt-upper" href="#">Events</a>
+                        <?php
+                        $cat = get_field('category');
+                        if ($cat == 'Course') {
+                            echo "Course";
+                        } else {
+                            echo "Event";
+                        }
+                        ?>
 
-            <div class="event__txt spacing-small-all post-styles">
-                <h3 class="event__title txt-light">6th President's centinnial dinner</h3>
+                    </a>
 
-                <a class="btn btn--light" href="#">More info</a>
-            </div>
-        </article>
+                    <div class="event__txt spacing-small-all post-styles">
+                        <h3 class="event__title txt-light"><?php the_title(''); ?></h3>
 
-        <article class="event grid__col grid__col--4 grid__col--tb2-12 grid__col--m-12">
-            <div class="event__img" style="background-image: url(http://via.placeholder.com/348x240);"></div>
+                        <a class="btn btn--light" href="<?php the_field('link_url'); ?>">More info</a>
+                    </div>
+                </article>
 
-            <a class="event__tag txt-upper" href="#">Events</a>
+        <?php
+            endwhile;
+        endif;
+        ?>
 
-            <div class="event__txt spacing-small-all post-styles">
-                <h3 class="event__title txt-light">WHO Conference</h3>
-
-                <a class="btn btn--light" href="#">More info</a>
-            </div>
-        </article>
-    </div>
-    <div class="site-header-spacer"></div>
-    <div class="section section--large grid grid--spaced">
-        <article class="event grid__col grid__col--4 grid__col--tb2-12 grid__col--m-12">
-            <div class="event__img" style="background-image: url(http://via.placeholder.com/348x240);"></div>
-
-            <a class="event__tag txt-upper" href="#">Courses</a>
-
-            <div class="event__txt spacing-small-all post-styles">
-                <h3 class="event__title txt-light">WHO traning &amp; education</h3>
-
-                <a class="btn btn--light" href="#">More info</a>
-            </div>
-        </article>
-
-        <article class="event grid__col grid__col--4 grid__col--tb2-12 grid__col--m-12">
-            <div class="event__img" style="background-image: url(http://via.placeholder.com/348x240);"></div>
-
-            <a class="event__tag txt-upper" href="#">Events</a>
-
-            <div class="event__txt spacing-small-all post-styles">
-                <h3 class="event__title txt-light">6th President's centinnial dinner</h3>
-
-                <a class="btn btn--light" href="#">More info</a>
-            </div>
-        </article>
-
-        <article class="event grid__col grid__col--4 grid__col--tb2-12 grid__col--m-12">
-            <div class="event__img" style="background-image: url(http://via.placeholder.com/348x240);"></div>
-
-            <a class="event__tag txt-upper" href="#">Events</a>
-
-            <div class="event__txt spacing-small-all post-styles">
-                <h3 class="event__title txt-light">WHO Conference</h3>
-
-                <a class="btn btn--light" href="#">More info</a>
-            </div>
-        </article>
     </div>
 </section>
 
