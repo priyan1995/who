@@ -3,6 +3,8 @@
 Template Name: Home Page Template
 */
 get_header();
+the_post();
+
 ?>
 
 
@@ -10,30 +12,30 @@ get_header();
 <div class="site-header-spacer"></div>
 
 <section class="site-banner site-banner--dashboard">
-    <div class="section section--large">
-        <h1 class="site-banner__title ">All The latest<br> information &amp; resources<br> <span class="txt-highlight-2">at your fingertips</span></h1>
+    <div class="section section--large">      
+    <h1><?php the_field('main_title'); ?></h1>
     </div>
 </section>
 
 <section class="section section--large spacing-large-bottom">
     <div class="link-block-large-outer grid">
         <div class="link-block link-block--large-img grid__col--6 grid__col--m-12">
-            <div class="link-block__img" style="background-image: url(http://via.placeholder.com/348x240)"></div>
+            <div class="link-block__img" style="background-image: url(<?php the_field('image_m_card'); ?>)"></div>
 
             <div class="link-block__txt post-styles">
-                <h2 class="link-block__title">Membership</h2>
-                <p class="txt-large">Sed accumsan tincidunt, feugait suscipit, consequat nisl veniam enim duis.</p>
-                <a class="btn" href="#">Membership</a>
+                <h2 class="link-block__title"><?php the_field('title_card_1'); ?></h2>
+                <p class="txt-large"><?php the_field('card_desc_m_card'); ?></p>
+                <a class="btn" href="<?php the_field('button_link_m_card'); ?>"><?php the_field('button_text_m_card'); ?></a>
             </div>
         </div>
 
         <div class="link-block link-block--large-img grid__col--6 grid__col--m-12">
-            <div class="link-block__img" style="background-image: url(http://via.placeholder.com/348x240)"></div>
+            <div class="link-block__img" style="background-image: url(<?php the_field('image_m_card_2'); ?>)"></div>
 
             <div class="link-block__txt link-block__txt--alt post-styles">
-                <h2 class="link-block__title">Elections</h2>
-                <p class="txt-large">Sed accumsan tincidunt, feugait suscipit, consequat nisl veniam enim duis.</p>
-                <a class="btn" href="#">Cast your vote</a>
+                <h2 class="link-block__title"><?php the_field('title_card_2'); ?></h2>
+                <p class="txt-large"><?php the_field('card_desc_m_card_2'); ?></p>
+                <a class="btn" href="<?php the_field('button_link_m_card_2'); ?>"><?php the_field('button_text_m_card_2'); ?></a>
             </div>
         </div>
     </div>
@@ -43,7 +45,7 @@ get_header();
     <div class="events__txt">
         <div class="grid section section--large spacing-large-top">
             <div class="grid__col grid__col--8 grid__col--m-12">
-                <h2 class="events__title">Upcoming courses &amp; events you won't want to miss</h2>
+                <h2 class="events__title"><?php the_field('card_section_2_title'); ?></h2>
             </div>
         </div>
     </div>
