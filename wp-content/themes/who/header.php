@@ -2,27 +2,27 @@
 <html <?php language_attributes(); ?> style="margin-top:0 !important">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="<?php bloginfo('charset'); ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- Required meta tags -->
+	<meta charset="<?php bloginfo('charset'); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 
-  <style>
-    svg {
-      width: 27%;
-      height: auto;
-      display: block;
-    }
-  </style>
+	<style>
+		svg {
+			width: 27%;
+			height: auto;
+			display: block;
+		}
+	</style>
 
 
-  <title><?php wp_title(); ?></title>
-  <?php wp_head(); ?>
+	<title><?php wp_title(); ?></title>
+	<?php wp_head(); ?>
 </head>
 
 <body class="no-touch no-js">
-  <?php /*
+	<?php /*
     <div class="header">
       <div class="header-wrap">
         <div class="container-fluid pd-top-bar">
@@ -57,14 +57,14 @@
       </div>
     </div>
     */
-    ?>
+	?>
 
 
-<header class="site-header">
+	<header class="site-header">
 		<div class="site-header__inner section section--large grid grid--spaced">
 			<div class="site-header__logo-wrapper grid__col grid__col--5 grid__col--m-12">
-				<a class="site-logo" href="/who"> 
- 
+				<a class="site-logo" href="/who">
+
 				</a>
 			</div>
 
@@ -73,7 +73,7 @@
 					<div class="menu-item">
 						<a href="#">
 							<div class="menu-item__icon">
-							<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/account.svg">
+								<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/account.svg">
 							</div>
 
 							<div>My Account</div>
@@ -85,7 +85,7 @@
 							<div>Menu</div>
 
 							<div class="menu-item__icon">
-							<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/hamburger.svg">
+								<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/hamburger.svg">
 							</div>
 						</a>
 					</div>
@@ -96,16 +96,16 @@
 						<li class="menu-item mobile-hide">
 							<a href="#">
 								<div class="menu-item__icon">
-                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/account.svg">
+									<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/account.svg">
 								</div>
 
-								<div>My Account</div>
+								<div><a href="">My Account</a></div>
 							</a>
 						</li>
 						<li class="menu-item">
 							<a href="#">
 								<div class="menu-item__icon">
-								<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/logout.svg">
+									<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/logout.svg">
 								</div>
 
 								<div>Logout</div>
@@ -131,17 +131,28 @@
 					</li>
 					</ul>
 
+					<?php
+                //   wp_nav_menu(
+                //     array(
+                //       'depth'       => 10,
+                //       'theme_location'  => 'primary',
+                //       'container_class' => 'false',
+                //       'container_id'    => '',
+                //       'menu_class'      => 'site-menu-primary',
+                //       'fallback_cb'     => '',
+                //       'menu_id'         => 'main-menu',
+                //       'walker'          => new WP_Bootstrap_Navwalker(),
+                //     )
+                //   );
+				  ?>
+				  
 					<ul class="site-menu-primary">
-
-						<!-- Check to highlight menu item if on relevent page -->
-
-						 
 
 						<li class="menu-item menu-item--membership <?php echo $current_class; ?>">
 							<a href="#">
 								School
 								<span class="menu-item__icon">
-                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/caret-down-deep.svg">
+									<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/caret-down-deep.svg">
 								</span>
 							</a>
 
@@ -160,15 +171,11 @@
 							</ul>
 						</li>
 
-						<!-- Check to highlight menu item if on relevent page -->
-
-						 
-
 						<li class="menu-item menu-item--elections <?php echo $current_class; ?>">
 							<a href="#">
 								Elections
 								<span class="menu-item__icon">
-                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/caret-down-deep.svg">
+									<img src="<?php echo bloginfo('template_url'); ?>/assets/img/icons/caret-down-deep.svg">
 								</span>
 							</a>
 
@@ -191,4 +198,3 @@
 			</div>
 		</div>
 	</header>
-
