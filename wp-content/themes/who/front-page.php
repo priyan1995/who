@@ -53,7 +53,7 @@ the_post();
     <div class="section section--large grid grid--spaced">
 
         <?php
-        $cours_event = new WP_Query(array('orderby' => 'date', 'post_type' => 'courses__events', 'order' => 'ASC'));
+        $cours_event = new WP_Query(array('orderby' => 'date', 'post_type' => 'courses__events', 'order' => 'DESC'));
         if ($cours_event->have_posts()) :
             while ($cours_event->have_posts()) :
                 $cours_event->the_post();
