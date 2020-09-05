@@ -48,5 +48,106 @@ function register_nero_primary_menu() {
 	 ));
 }
 
+// === theme option page
+
+add_action("admin_menu", "mythemeoptions");
+
+function mythemeoptions()
+{
+
+  add_menu_page(
+    "theme-options", //page title
+    "Theme-options", //Menu title
+    "manage_options", //Capability
+    "theme-options", //Menu Slug
+    "mycustom_options", //callback funtion
+    "dashicons-admin-generic" //icon
+
+  );
+}
 
 
+function mycustom_options()
+{
+  // we have to link our custom settings
+  ?>
+  <div>
+  <h1>Theme Options Panel</h1>
+  <?php settings_errors(); ?>
+    <form action="options.php" method="post">
+      <?php
+      settings_fields("section");
+      do_settings_sections("theme-options");
+      submit_button();
+      ?>
+    </form>
+  </div>
+<?php
+}
+
+
+// theme options settings page
+function theme_options_setting()
+{
+
+	add_settings_section(
+		"section", //id of setting section
+		"All Page", // title
+		"", // callback function
+		"theme-options" // page
+	  );
+
+	  add_settings_field(
+		"facebook_url",
+		"Facebook Url",
+		"display_fb_url",
+		"theme-options",
+		"section"
+	
+	  );
+
+	  add_settings_field(
+		"twitter_url",
+		"Twitter Url",
+		"display_twitter_url",
+		"theme-options",
+		"section"
+	
+	  );
+
+	  add_settings_field(
+		"footer_credit",
+		"Footer Credit",
+		"display_footer_credit",
+		"theme-options",
+		"section"
+	
+	  );
+
+
+
+register_setting("section", "facebook_url");
+register_setting("section", "twitter_url");
+register_setting("section", "footer_credit");
+
+}
+
+add_action("admin_init", "theme_options_setting");
+
+function display_twitter_url()
+{?>
+  <input type="url" name="twitter_url" value="<?php echo get_option('twitter_url'); ?>" id="twitter_url" /> 
+<?php
+}
+
+function display_fb_url()
+{?>
+  <input type="url" name="facebook_url" value="<?php echo get_option('facebook_url'); ?>" id="facebook_url" /> 
+<?php
+}
+
+function display_footer_credit()
+{?>
+  <input type="text" name="footer_credit" value="<?php echo get_option('footer_credit'); ?>" id="footer_credit" /> 
+<?php
+}
