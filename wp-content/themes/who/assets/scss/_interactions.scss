@@ -1,0 +1,181 @@
+.no-touch {
+	.jcf-checkbox,
+	.jcf-checkbox input,
+	.jcf-radio,
+	.jcf-radio input {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.jcf-file-remove:hover {
+		opacity: 0.6;
+	}
+
+	.jcf-option:hover {
+		background: $ui-color-3-3;
+	}
+
+	//---- Site Logo
+	.site-logo:hover {
+		opacity: 0.7;
+	}
+
+	//---- Site Footer
+	.site-footer__menu li a:hover {
+		border-bottom: 2px solid $ui-color-1;
+	}
+
+	//---- Buttons
+	.btn:not([disabled]):hover,
+	button:hover,
+	input:not([disabled])[type="submit"]:hover {
+		background-color: $ui-color-1;
+	}
+
+	.btn--light:hover {
+		background: $ui-color-2;
+		// Type
+		color: #fff;
+	}
+
+	//---- Forms
+	input:not([type="submit"]):focus,
+	textarea:focus {
+		border-color: $ui-color-3-2;
+	}
+
+	//---- Tables
+	th a:hover,
+	td a:hover {
+		opacity: 0.6;
+	}
+
+	//---- Post
+	.post-styles {
+		p a:hover {
+			border-bottom: 2px solid $ui-color-1;
+		}
+
+		.inline-list li > a:hover {
+			opacity: 0.6;
+		}
+
+		p a.link-arrow:hover {
+			opacity: 0.6;
+			border-bottom: transparent;
+		}
+
+		a.txt-light:hover {
+			opacity: 0.6;
+		}
+	}
+
+	//---- Modal
+	.modal__close:hover {
+		opacity: 0.3;
+	}
+
+	//---- Social
+	.social__item--facebook a:hover {
+		background: #fff;
+
+		svg path {
+			fill: map-get($social-colors, facebook);
+		}
+	}
+
+	.social__item--twitter a:hover {
+		background: #fff;
+
+		svg path {
+			fill: map-get($social-colors, twitter);
+		}
+	}
+
+	//---- Event
+	.event__tag:hover {
+		background: $ui-color-2;
+		// Type
+		color: #fff;
+	}
+
+	//---- Tabbed Section
+	.tabbed__tab:hover {
+		background: $ui-color-3-1;
+	}
+
+	//---- Resources
+	.resources__menu {
+		.menu-item > a:hover,
+		.sub-menu-item > a:hover {
+			// Type
+			color: $ui-color-4;
+		}
+
+		.menu-item--has-sub-menu a:hover:after {
+			border-color: #fff;
+		}
+	}
+
+	.resources__download-links .menu-item a:hover {
+		// Type
+		color: $ui-color-4;
+
+		svg path {
+			stroke: $ui-color-4;
+		}
+	}
+
+	//---- Tooltip
+	.tooltip-icon:hover {
+		background: $ui-color-2;
+		opacity: 1;
+
+		svg path {
+			fill: $ui-color-4;
+		}
+	}
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	//---- Site Menu
+	.site-menu-primary,
+	.site-menu-secondary {
+		.sub-menu .sub-menu-item a:hover {
+			// Type
+			color: $ui-color-1;
+		}
+	}
+
+	.site-menu-primary {
+		.menu-item a:hover span {
+			background-color: $ui-color-2;
+ 
+			path {
+				stroke: #fff;
+			}
+ 		}
+	}
+
+	.site-menu-secondary {
+		.menu-item:not([class*="menu-item--has-sub-menu"]) a:hover {
+			// Type
+			color: $ui-color-1;
+
+			.menu-item__icon svg path {
+				fill: $ui-color-1;
+			}
+		}
+
+		.menu-item--has-sub-menu a:hover {
+			// Type
+			color: $ui-color-1;
+
+			path {
+				stroke: $ui-color-1;
+			}
+		}
+	}
+}

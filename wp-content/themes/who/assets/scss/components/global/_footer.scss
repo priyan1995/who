@@ -1,0 +1,117 @@
+.site-footer__inner {
+	@include flex(flex);
+}
+
+.site-footer__menu {
+	list-style: none;
+
+	li {
+		display: inline-block;
+		// Type
+		font-family: $font-2;
+
+		a {
+			border-bottom: 2px solid transparent;
+			color: $ui-color-1;
+		}
+	}
+
+	li + li {
+		margin-left: 30px;
+	}
+}
+
+.site-footer__copy {
+	margin-left: auto;
+	// Type
+	@include rem(20px);
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, tablet-1) + 1) {
+	.site-footer {
+		padding: 40px 0;
+	}
+
+	.site-footer__menu li {
+		// Type
+		@include rem(20px);
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, tablet-1)) {
+	.site-footer {
+		padding: 25px 0;
+	}
+
+	.site-footer__menu li {
+		// Type
+		@include rem(18px);
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) and (max-width: map-get($breakpoints, tablet-2)) {
+	.site-footer {
+		position: relative;
+	}
+
+	.site-footer__menu {
+		width: 80%;
+		position: absolute;
+		top: 20px;
+		right: 4%;
+		// Type
+		text-align: right;
+	}
+
+	.site-footer__copy {
+		width: 80%;
+		position: absolute;
+		bottom: 20px;
+		right: 4%;
+		// Type
+		text-align: right;
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	.site-footer__inner {
+		@include flex-align_items(center);
+	}
+
+	.site-footer__menu {
+		margin-left: 30px;
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.site-footer__inner {
+		@include flex_wrap(wrap);
+
+		.social {
+			width: 40%;
+		}
+	}
+
+	.site-footer__menu {
+		width: calc(60% - 10px);
+		margin-left: 10px;
+		// Type
+		text-align: right;
+
+		li a {
+			@include rem(16px);
+		}
+
+		li + li {
+			margin-top: 20px;
+		}
+	}
+
+	.site-footer__copy {
+		width: 100%;
+		// Type
+		text-align: right;
+		margin-top: 20px;
+	}
+}

@@ -1,0 +1,54 @@
+.tabbed {
+	margin-top: 80px;
+	border-top: $border;
+}
+
+.tabbed__tabs {
+	@include flex(flex);
+	@include transform(translateY(-100%));
+}
+
+.tabbed__tab {
+	width: calc(50% - 5px);
+	height: 80px;
+	@include flex(flex);
+	@include flex_align_items(center);
+	@include flex_justify(center);
+	padding: 20px;
+	cursor: pointer;
+
+	& + & {
+		margin-left: 10px;
+	}
+}
+
+.tabbed__tab.active {
+	background: #fff;
+	border-top: $border;
+	border-bottom: 2px solid transparent;
+	border-left: $border;
+	border-right: $border;
+}
+
+.tabbed__tab:not(.active) {
+	background: $ui-color-3-3;
+	border-top: 2px solid transparent;
+	border-bottom: $border;
+}
+
+.tabbed__content:not(.active) {
+	display: none;
+}
+
+//---- Responsive
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.tabbed__tab h2 {
+		// Type
+		text-align: center;
+		@include rem(16px);
+	}
+
+	.tabbed__content {
+		margin-top: -40px;
+	}
+}

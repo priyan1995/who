@@ -1,0 +1,323 @@
+.jcf-icon {
+	width: 100%;
+	height: 100%;
+	display: block;
+
+	svg {
+		height: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+	}
+}
+
+//---- Dropdown
+.jcf-select {
+	display: block;
+	position: relative;
+	z-index: 10;
+	cursor: pointer;
+
+	.jcf-icon svg {
+		width: 12px;
+	}
+}
+
+.jcf-select-text {
+	display: block;
+}
+
+.jcf-select-opener {
+	width: 55px;
+	height: 100%;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-top: none;
+	border-right: none;
+}
+
+.jcf-drop-active,
+.jcf-option {
+	background: #fff;
+}
+
+.jcf-drop-active {
+	z-index: map-get($z-index, 2);
+
+	.jcf-select-text {
+		border: none;
+		position: relative;
+		z-index: map-get($z-index, 1) + 1;
+	}
+
+	.jcf-select-opener {
+		z-index: map-get($z-index, 1) + 1;
+
+		.jcf-icon {
+			@include transform(rotate(180deg));
+		}
+	}
+}
+
+.jcf-select-drop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: map-get($z-index, 1);
+	@include shadow-small;
+}
+
+.jcf-drop-flipped .jcf-select-drop {
+	top: auto;
+	padding-top: 0;
+}
+
+.jcf-list-content {
+	max-height: 230px !important;
+	position: relative;
+	overflow: auto;
+	display: block;
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		margin: 0;
+		overflow: hidden;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+.jcf-option {
+	width: 100%;
+	padding: 21px 15px 0;
+	display: inline-block;
+	cursor: pointer;
+	
+	&:not(.jcf-selected) {
+		// Type
+		color: $text-color-2;
+	}
+}
+
+.jcf-option.jcf-selected {
+	background: $ui-color-3-3;
+}
+
+.jcf-option.jcf-disabled {
+	display: none;
+}
+
+//---- Checkbox
+.jcf-checkbox,
+.jcf-radio {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	position: relative;
+	background: #fff;
+
+	span {
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		
+		@include transform(translate(-50%, -50%));
+	}
+}
+
+.jcf-checkbox span {
+	background: image-url('icons/tick.svg') center / 100% no-repeat;
+}
+
+.jcf-radio span {
+	background: $ui-color-1;
+}
+
+.jcf-checkbox.jcf-checked,
+.jcf-radio.jcf-checked {
+	border-color: $ui-color-3-2;
+}
+
+.jcf-radio,
+.jcf-radio span {
+	border-radius: 1000px;
+}
+
+.jcf-checked {
+	span {
+		opacity: 1;
+	}
+}
+
+//---- Number
+.jcf-number {
+	position: relative;
+	display: block;
+
+	input {
+		padding-right: 50px;
+		padding-left: 50px;
+		-moz-appearance: textfield;
+		// Type
+		text-align: center;
+	}
+
+	input::-webkit-inner-spin-button,
+	input::-webkit-outer-spin-button {
+		margin: 0;
+		-webkit-appearance: none;
+	}
+}
+
+.jcf-btn-inc,
+.jcf-btn-dec {
+	width: 55px;
+	height: 100%;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	cursor: pointer;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	.jcf-icon {
+		svg {
+			width: 20px;
+			fill: $ui-color-1;
+		}
+	}
+}
+
+.jcf-btn-inc {
+	right: 0;
+}
+
+.jcf-btn-dec {
+	left: 0;
+}
+
+//---- File
+.jcf-file {
+	@include flex(flex);
+	@include flex_align_items(center);
+	position: relative;
+
+	.jcf-fake-input,
+	.jcf-real-element {
+		cursor: pointer;
+	}
+
+	.jcf-upload-button {
+		@extend .btn;
+	}
+
+	.jcf-fake-input {
+		width: 85px;
+		height: 85px;
+		@include flex(flex);
+		@include flex_align_items(center);
+		@include flex_justify(center);
+		margin-right: 30px;
+		padding: 10px;
+		background: $ui-color-3-3;
+		background-position: center;
+		background-size: cover;
+		border: $border;
+		// Type
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $font-2;
+		color: $heading-color;
+		@include rem(16px);
+	}
+
+	.jcf-fake-input.jcf-hide-text {
+		@extend %remove-text;
+	}
+
+	.jcf-real-element {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	.jcf-file-remove {
+		// Type
+		color: $ui-color-1;
+		@include rem(20px);
+		font-family: $font-2;
+	}
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	.jcf-select-text {
+		padding: 16px 15px 0;
+	}
+
+	.jcf-option {
+		// Type
+		@include rem(20px);
+	}
+
+	.jcf-select-drop {
+		padding-top: 55px;
+	}
+
+	.jcf-drop-flipped .jcf-select-drop {
+		bottom: calc(100% - 55px);
+		padding-bottom: 55px;
+	}
+
+
+	.jcf-file-remove {
+		margin-top: 20px;
+		margin-left: auto;
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.jcf-select-text {
+		padding: 11px 15px 0;
+	}
+
+	.jcf-option {
+		// Type
+		@include rem(16px);
+	}
+
+	.jcf-select-drop {
+		padding-top: 40px;
+	}
+	
+	.jcf-drop-flipped .jcf-select-drop {
+		bottom: calc(100% - 40px);
+		padding-bottom: 40px;
+	}
+
+	.jcf-file {
+		@include flex_wrap(wrap);
+	}
+
+	.jcf-file-remove {
+		width: 100%;
+		margin-top: 20px;
+		padding-top: 20px;
+		border-top: 2px solid $ui-color-3-1;
+		// Type
+		text-align: center;
+	}
+}

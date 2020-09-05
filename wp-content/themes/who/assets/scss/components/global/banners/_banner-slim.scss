@@ -1,0 +1,17 @@
+.site-banner--slim {
+	padding: 50px 0 40px;
+	background: $ui-color-1;
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, tablet-1) + 1) {
+	.site-banner--slim {
+		padding: 50px 0 40px;
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, tablet-1)) {
+	.site-banner--slim {
+		padding: 30px 0 20px;
+	}
+}

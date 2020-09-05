@@ -1,0 +1,128 @@
+.grid {
+	@include flex(flex);
+	@include flex_wrap(wrap);
+}
+
+@for $i from 1 through $grid-columns {
+	.grid__col--#{$i} {
+		width: (100% / $grid-columns * $i);
+	}
+
+	.grid--spaced {
+		.grid__col--#{$i} {
+			@include calc_grid_col($i);
+
+			&:not(:last-of-type) {
+				margin-right: $grid-spacing;
+			}
+		}
+	}
+}
+
+//---- Spaced
+@for $i from 1 through 6 {
+	@if $i != 5 {
+		.grid--spaced-#{$i} {
+			.grid__col {
+				&:nth-of-type(#{($grid-columns / $i)}n) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+.grid--nospace {
+	.grid__col:not(:last-of-type) {
+		margin-right: 0;
+	}
+}
+
+//---- Test
+.grid--test {
+	background: #ddd;
+
+	.grid__col {
+		background: #eee;
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) and (max-width: map-get($breakpoints, tablet-2)) {
+	@for $i from 1 through $grid-columns {
+		.grid__col--tb2-#{$i} {
+			width: (100% / $grid-columns * $i);
+		}
+
+		.grid--spaced {
+			.grid__col--tb2-#{$i} {
+				@include calc_grid_col($i);
+
+				&:not(:last-of-type) {
+					margin-right: $grid-spacing;
+				}
+			}
+		}
+	}
+
+	//---- Spaced
+	@for $i from 1 through 6 {
+		@if $i != 5 {
+			.grid--spaced--tb2-#{$i} {
+				.grid__col {
+					&:nth-of-type(#{($grid-columns / $i)}n) {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.grid__col--tb2-12 {
+		width: 100%;
+		margin-right: 0 !important;
+
+		& + & {
+			margin-top: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	@for $i from 1 through $grid-columns {
+		.grid__col--m-#{$i} {
+			width: (100% / $grid-columns * $i);
+		}
+
+		.grid--spaced {
+			.grid__col--m-#{$i} {
+				@include calc_grid_col($i);
+
+				&:not(:last-of-type) {
+					margin-right: $grid-spacing;
+				}
+			}
+		}
+	}
+
+	//---- Spaced
+	@for $i from 1 through 6 {
+		@if $i != 5 {
+			.grid--spaced--m-#{$i} {
+				.grid__col {
+					&:nth-of-type(#{($grid-columns / $i)}n) {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.grid__col--m-12 {
+		width: 100%;
+		margin-right: 0 !important;
+	}
+
+	.grid__col--m-0 {
+		display: none;
+	}
+}

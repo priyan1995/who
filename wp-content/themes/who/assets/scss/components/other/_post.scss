@@ -1,0 +1,175 @@
+.post-styles {
+	h1 + *,
+	h2 + *,
+	h3 + *,
+	h4 + *,
+	h5 + *,
+	h6 + * {
+		margin-top: 10px;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	ul li,
+	ol li {
+		margin: 3px 0;
+	}
+
+	h1 { line-height: 120%; }
+	h2 { line-height: 115%; }
+	h3 { line-height: 120%; }
+	h4 { line-height: 130%; }
+	h5 { line-height: 140%; }
+	h6 { line-height: 150%; }
+
+	p,
+	li,
+	address {
+		// Type
+		line-height: 155%;
+	}
+
+	p a:not([class*="btn"]) {
+		// Type
+		color: $ui-color-1;
+		font-family: $font-2;
+		border-bottom: 2px solid transparent;
+	}
+
+	blockquote {
+		p {
+			// Type
+			font-style: italic;
+			@include rem(22px);
+		}
+
+		cite {
+			// Type
+			font-style: normal;
+			line-height: 175%;
+		}
+	}
+
+	.jcf-select {
+		li {
+			margin: 0;
+		}
+	}
+
+	.alignleft  { float: left; }
+	.alignright { float: right; }
+
+	.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+		display: block
+	}
+
+	.wp-caption {
+		display: inline-block;
+	}
+
+	.wp-caption-text {
+		margin-top: 10px;
+		// Type
+		text-align: center;
+	}
+
+	.inline-list {
+		list-style: none;
+	}
+
+	.table-wrap {
+		width: 100%;
+		overflow: auto;
+
+		table {
+			min-width: 600px;
+		}
+	}
+
+	a.link-arrow {
+		&:before {
+			content: "";
+			width: 18px;
+			height: 14px;
+			display: inline-block;
+			margin-right: 8px;
+			background: image-url('icons/arrow.svg') center / 100% no-repeat;
+		}
+	}
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	.post-styles {
+		* + p,
+		p + * {
+			margin-top: 30px;
+		}
+
+		* + h1,
+		* + h2,
+		* + h3,
+		* + h4,
+		* + h5,
+		* + h6,
+		* + .table-wrap,
+		.table-wrap + *,
+		* + blockquote,
+		blockquote + *,
+		* + .grid,
+		.grid + *,
+		* + .btn,
+		.btn + * {
+			margin-top: 40px;
+		}
+
+		.inline-list {
+			li {
+				display: inline-block;
+			}
+
+			li + li {
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.post-styles {
+		* + p,
+		p + * {
+			margin-top: 20px;
+		}
+
+		* + h1,
+		* + h2,
+		* + h3,
+		* + h4,
+		* + h5,
+		* + h6,
+		* + .table-wrap,
+		.table-wrap + *,
+		* + blockquote,
+		blockquote + *,
+		* + .grid,
+		.grid + *,
+		* + .btn,
+		.btn + * {
+			margin-top: 20px;
+		}
+
+		.grid__col {
+			width: 100%;
+			margin-right: 0;
+		}
+
+		.grid__col + .grid__col {
+			margin-top: 30px;
+		}
+	}
+}

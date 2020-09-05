@@ -1,0 +1,114 @@
+.form-step {
+	& + & {
+		border-top: $border;
+	}
+}
+
+.form-step.active {
+	background: $ui-color-3;
+}
+
+.form-step:not(.active):not(.has-content) {
+	background: #f2fafd;
+}
+
+.form-step.has-content {
+	background: $ui-color-4-1;
+
+	.form-step__number {
+		@extend %remove-text;
+	}
+}
+
+.form-step__label {
+	position: relative;
+	// Type
+	line-height: 140%;
+}
+
+.form-step__number {
+	@include flex(inline-flex);
+	@include flex_align_items(center);
+	@include flex_justify(center);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	@include transform(translateY(-50%));
+	background: $ui-color-1;
+	border-radius: 100%;
+	margin-right: 20px;
+	// Type
+	color: #fff;
+}
+
+.js-toggle-form-step.inactive,
+.js-toggle-form-step.inactive * {
+	cursor: pointer;
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, tablet-2) + 1) {
+	.form-step {
+		padding: 0 60px 10px 60px;
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) and (max-width: map-get($breakpoints, tablet-2)) {
+	.form-step {
+		padding: 0 30px 10px 30px;
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	.form-step__inner {
+		padding-bottom: 50px;
+	}
+
+	.form-step__label {
+		padding: 30px 0 20px 80px;
+		// Type
+		@include rem(22px);
+	}
+
+	.form-step__number {
+		width: 50px;
+		height: 50px;
+		// Type
+		@include rem(22px);
+	}
+
+	.form-step.has-content {
+		.form-step__number {
+			background: $ui-color-1 image-url('icons/tick-light.svg') center / 16px no-repeat;
+		}
+	}	
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.form-step__inner {
+		padding-bottom: 20px;
+	}
+
+	.form-step {
+		padding: 0 20px 10px 20px;
+	}
+
+	.form-step__label {
+		padding: 20px 0 20px 60px;
+		// Type
+		@include rem(18px);
+	}
+
+	.form-step__number {
+		width: 36px;
+		height: 36px;
+		// Type
+		@include rem(16px);
+	}
+
+	.form-step.has-content {
+		.form-step__number {
+			background: $ui-color-1 image-url('icons/tick-light.svg') center / 14px no-repeat;
+		}
+	}	
+}

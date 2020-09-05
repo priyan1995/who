@@ -1,0 +1,207 @@
+input:not([type="submit"]),
+textarea,
+.jcf-select-text,
+.jcf-checkbox,
+.jcf-radio {
+	border: $border;
+}
+
+input:not([type="submit"]),
+textarea,
+.jcf-select-text,
+.jcf-select-drop {
+	width: 100%;
+	display: block;
+	background: #fff;
+	// Type
+	font-family: $font-1;
+	color: $text-color;
+}
+
+input:not([type="submit"]),
+textarea {
+	padding: 0 15px;
+	// Type
+	line-height: normal;
+
+	&::-moz-placeholder {
+		opacity: .65;
+	}
+
+	&::-webkit-input-placeholder {
+		opacity: .65;
+	}
+}
+
+input:not([type="submit"]),
+textarea {
+	cursor: text;
+}
+
+input,
+textarea,
+button {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+input[type="submit"],
+button {
+	@extend .btn;
+}
+
+input[type="submit"]:disabled {
+	background: $ui-color-2-1;
+	cursor: default;
+}
+
+textarea {
+	min-height: 150px;
+	padding-top: 15px;
+}
+
+.textarea-wrapper {
+	position: relative;
+
+	textarea {
+		padding-bottom: 50px;
+	}
+}
+
+.textarea-count {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	opacity: 0.4;
+}
+
+label {
+	display: block;
+	// Type
+	font-family: $font-2;
+	color: $heading-color;
+	@include rem(18px);
+}
+
+.label-large {
+	// Type
+	line-height: 140%;
+}
+
+.label__secondary {
+	// Type
+	color: $text-color;
+	font-family: $font-1;
+}
+
+.checkbox-wrapper,
+.radio-wrapper {
+	@include flex(flex);
+	@include flex_align_items(center);
+
+	label {
+		@include flex_order(1);
+		margin-left: 15px;
+		// Type
+		font-family: $font-1;
+		color: $text-color;
+		line-height: 140%;
+	}
+
+	.jcf-checkbox,
+	.jcf-radio {
+		margin-top: 0;
+		@include flex_shrink(0);
+	}
+
+	& + & {
+		margin-top: 8px;
+	}
+}
+
+input[type="text"]:disabled {
+	padding-right: 45px;
+	background: $ui-color-3-3 image-url('icons/lock.svg') center right 15px / 16px no-repeat;
+	// Type
+	color: #60758c;
+
+	&::-moz-placeholder {
+		opacity: 1;
+		// Type
+		color: $ui-color-3-2;
+	}
+
+	&::-webkit-input-placeholder {
+		opacity: 1;
+		// Type
+		color: $ui-color-3-2;
+	}
+}
+
+input,
+textarea,
+select {
+	&.field__error {
+		border-color: $ui-color-10;
+
+		& + .field__error-msg {
+			margin-top: 5px!important;
+		}
+	}
+}
+
+.field__error-msg {
+	display: block;
+	// Type
+	font-family: $font-2;
+	text-transform: uppercase;
+	@include rem(12px);
+}
+
+input[type="text"].input-euro {
+	padding-left: 30px;
+	background: image-url('icons/input-euro.svg') 12px center / 10px no-repeat;
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	input:not([type="submit"]),
+	.jcf-select-text,
+	.jcf-fake-input,
+	.jcf-option {
+		height: 55px;
+	}
+
+	input:not([type="submit"]),
+	textarea,
+	.jcf-select-text,
+	.jcf-select-drop {
+		@include rem(20px);
+	}
+
+	.label-large {
+		// Type
+		@include rem(26px);
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	input:not([type="submit"]),
+	.jcf-select-text,
+	.jcf-fake-input,
+	.jcf-option {
+		height: 40px;
+	}
+
+	input:not([type="submit"]),
+	textarea,
+	.jcf-select-text,
+	.jcf-select-drop {
+		@include rem(16px);
+	}
+
+	.label-large {
+		// Type
+		@include rem(20px);
+	}
+}

@@ -1,0 +1,97 @@
+body {	font-family: $font-1; font-size: $text-size-base; color: $text-color; }
+
+h1, h1 a,
+h2, h2 a,
+h3, h3 a,
+h4, h4 a,
+h5, h5 a,
+h6, h6 a { color: $heading-color; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-family: $font-2; font-weight: normal; font-style: normal; text-transform: uppercase; }
+
+strong  { font-family: $font-2; font-weight: normal; }
+em      { font-style: italic; }
+a       { color: $text-color; text-decoration: none; position: relative; }
+
+address { font-style: normal; }
+
+.txt-left   { text-align: left; }
+.txt-center { text-align: center; }
+.txt-right  { text-align: right; }
+
+.txt-highlight   { color: $ui-color-1; }
+.txt-highlight-2 { color: $ui-color-4; }
+.txt-light       { color: #fff; }
+
+.txt-upper { text-transform: uppercase; }
+.txt-lower { text-transform: none; }
+
+.wf-loading {
+	h1, h2, h3, h4, h5, h6,
+	p, li, a,
+	address,
+	cite,
+	tr {
+		visibility: hidden;
+	}
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, tablet-1) + 1) {
+	p,
+	li,
+	address { font-size: $text-size; }
+
+	h1 { @include rem(82px); }
+	h2 { @include rem(36px); }
+	h3 { @include rem(26px); }
+	h4 { @include rem(24px); }
+	h5 { @include rem(22px); }
+	h6 { @include rem(20px); }
+
+	.txt-large { @include rem(26px); }
+	.txt-small { @include rem(18px); }
+
+	.title-small { @include rem(36px); }
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) and (max-width: map-get($breakpoints, tablet-1)) {
+	p,
+	li,
+	address { @include rem(20px); }
+
+	h1 { @include rem(62px); }
+	h2 { @include rem(32px); }
+	h3 { @include rem(26px); }
+	h4 { @include rem(24px); }
+	h5 { @include rem(22px); }
+	h6 { @include rem(20px); }
+
+	.txt-large { @include rem(22px); }
+	.txt-small { @include rem(18px); }
+
+	.title-small { @include rem(36px); }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	p,
+	li,
+	address { @include rem(16px); }
+
+	h1 { @include rem(32px); }
+	h2 { @include rem(22px); }
+	h3 { @include rem(20px); }
+	h4 { @include rem(18px); }
+	h5 { @include rem(16px); }
+	h6 { @include rem(16px); }
+
+	.txt-large { @include rem(20px); }
+	.txt-small { @include rem(16px); }
+
+	.title-small { @include rem(26px); }
+}

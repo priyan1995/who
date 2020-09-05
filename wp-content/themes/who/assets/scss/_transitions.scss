@@ -1,0 +1,145 @@
+.no-touch {
+	//---- JCF
+	.jcf-checkbox span,
+	.jcf-radio span {
+		@include transition(opacity ease $transition-speed);
+	}
+
+	.jcf-select-opener .jcf-icon {
+		@include transition(transform ease $transition-speed);
+	}
+
+	.jcf-file-remove {
+		@include transition(opacity ease $transition-speed);
+	}
+
+	//---- Site Logo
+	.site-logo {
+		@include transition(opacity ease $transition-speed);
+	}
+
+	//---- Site Menu
+	.site-menu-primary,
+	.site-menu-secondary {
+		.sub-menu .sub-menu__item a {
+			@include transition(color ease $transition-speed);
+		}
+	}
+
+	.site-menu-primary .menu-item .menu-item__icon {
+		@include transition(background ease $transition-speed);
+
+		path {
+			@include transition(stroke ease $transition-speed);
+		}
+	}
+
+	.site-menu-secondary {
+		.menu-item a {
+			// Type
+			@include transition(color ease $transition-speed);
+
+			.menu-item__icon svg path {
+				@include transition(fill ease $transition-speed);
+			}
+		}
+	}
+
+	//---- Site Footer
+	.site-footer__menu li a {
+		@include transition(border-color ease $transition-speed);
+	}
+
+	//---- Buttons
+	.btn,
+	button,
+	input[type="submit"],
+	.jcf-upload-button {
+		@include transition(background-color ease $transition-speed, color ease $transition-speed);
+	}
+
+	//---- Forms
+	input:not([type="submit"]),
+	textarea {
+		@include transition(border-color ease $transition-speed);
+	}
+
+	//---- Tables
+	th a,
+	td a {
+		@include transition(opacity ease $transition-speed);
+	}
+
+	//---- Post
+	.post-styles {
+		p a {
+			@include transition(border-color ease $transition-speed);
+		}
+
+		.inline-list li > a:hover {
+			@include transition(opacity ease $transition-speed);
+		}
+
+		p a.link-arrow {
+			@include transition(opacity ease $transition-speed);
+		}
+
+		a.txt-light {
+			@include transition(opacity ease $transition-speed);
+		}
+	}
+
+	//---- Modal
+	.modal__close {
+		@include transition(opacity ease $transition-speed);
+	}
+
+	//---- Social
+	.social__item a {
+		@include transition(background ease $transition-speed);
+
+		svg path {
+			@include transition(fill ease $transition-speed);
+		}
+	}
+
+	//---- Event
+	.event__tag {
+		@include transition(background ease $transition-speed, color ease $transition-speed);
+	}
+
+	//---- Tabbed Section
+	.tabbed__tab {
+		@include transition(background ease $transition-speed);
+	}
+
+	//---- Resources
+	.resources__menu {
+		.menu-item > a,
+		.sub-menu-item > a {
+			// Type
+			@include transition(color ease $transition-speed);
+		}
+
+		.menu-item--has-sub-menu a:after {
+			@include transition(border-color ease $transition-speed);
+		}
+	}
+
+	.resources__download-links .menu-item a {
+		@include transition(color ease $transition-speed);
+
+		svg path {
+			@include transition(stroke ease $transition-speed);
+		}
+	}
+
+	//---- Tooltip
+	.tooltip-icon {
+		@include transition(background ease $transition-speed);
+
+		svg path {
+			@include transition(fill ease $transition-speed);
+		}
+	}
+}

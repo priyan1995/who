@@ -1,0 +1,23 @@
+.election {
+	background: $ui-color-3-3;
+
+	& + & {
+		margin-top: 10px;
+	}
+}
+
+.election__title {
+	// Type
+	text-transform: none;
+}
+
+.post-styles .election__date {
+	margin-top: 15px;
+}
+
+//---- Responsive
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.election *:last-child {
+		text-align: left;
+	}
+}

@@ -1,0 +1,92 @@
+//---- Fonts
+$font-1: HelveticaNeueLT-Condensed, 'Arial', sans-serif;
+$font-2: HelveticaNeueLT-BoldCond, 'Arial', sans-serif;
+
+$font-1-bold: 700;
+$font-2-bold: 700;
+
+//---- Base
+$text-size-base: 16px;     // Important: Don't change this
+$text-size     : 1.375rem; // 18px
+
+//---- Colors
+$text-color   : #58585b; // Gray
+$text-color-2 : #9f9fa0; // Gray Light
+$heading-color: #1a4a83; // Blue
+
+$ui-color-1:   #2a70b8; // Blue
+$ui-color-2:   #004a8f; // Blue Dark
+$ui-color-2-1: #99b7d2; // Blue Dark Disabled
+$ui-color-2-2: #1f3a6c; // Blue Dark Darker
+$ui-color-3:   #e4f4fb; // Blue Light
+$ui-color-3-1: #cadaec; // Blue Light dark
+$ui-color-3-2: #9bb6d4; // Blue Light darker
+$ui-color-3-3: #f1f7ff; // Blue Light Lighter
+$ui-color-3-4: #a7dcf2; // Blue Light Bright
+$ui-color-4:   #fcb814; // Yellow
+$ui-color-4-1: #ffe4a4; // Yellow Light
+$ui-color-5:   #cdd3de; // Gray
+$ui-color-5-1: #7c8590; // Gray Darker
+$ui-color-5-2: #a4aab2; // Gray Lighter
+$ui-color-6:   #6e993f; // Green
+$ui-color-6-1: #e7f2d9; // Green Light
+
+$ui-color-10:  #cf3030; // Error Red
+$ui-color-11:  #6e993f; // Success Green
+
+//---- Other
+$transition-speed: 0.25s;
+$border: 2px solid $ui-color-3-1;
+
+$z-index: (
+	1: 900,
+	2: 800,
+	3: 700
+);
+
+//---- Site Size & Spacing
+$sections: (
+	tiny,
+	small,
+	medium,
+	large,
+	huge
+);
+
+$section-widths: (
+	percent: 92%,
+	tiny   : 540px,
+	small  : 720px,
+	medium : 910px,
+	large  : 1100px,
+	huge   : 1200px
+);
+
+$outer-spacing: (100 - map-get($section-widths, percent)) / 2;
+
+$grid-spacing: 2.6%;
+$grid-columns: 12;
+
+$spacing-small : 30px;
+$spacing-medium: 60px;
+$spacing-large : 100px;
+$spacing-huge  : 175px;
+
+//---- Social Colors
+$social-colors: (
+	twitter : #55acee,
+	facebook: #3b5998,
+	google  : #dd4b39,
+	linkedin: #0073b2,
+	rss     : #ee802f
+);
+
+//---- Breakpoints
+$breakpoints: (
+	laptop-1: 1440px,
+	laptop-2: 1280px,
+	tablet-1: 1024px,
+	tablet-2: 768px,
+	mobile-1: 670px,
+	mobile-2: 500px
+);

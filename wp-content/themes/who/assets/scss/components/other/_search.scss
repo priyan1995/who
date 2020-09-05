@@ -1,0 +1,57 @@
+.search-result {
+	background-color: $ui-color-3-3;
+
+	& + & {
+		margin-top: 10px;
+	}
+}
+
+.search-result__location {
+	p + p {
+		margin-top: 10px;
+	}
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	.search-filters {
+		@include flex(flex);
+		@include flex_align_items(center);
+	}
+
+	.search-filters__right {
+		@include flex(flex);
+		@include flex_align_items(center);
+		@include flex_grow(1);
+		margin-left: auto;
+
+		p {
+			margin-left: auto;
+			padding-left: 20px;
+		}
+
+		.jcf-select {
+			margin-left: 20px;
+		}
+
+		.jcf-select {
+			@include flex_grow(1);
+		}
+
+		#filter-country + .jcf-select {
+			max-width: 280px;
+		}
+
+		#filter-sort + .jcf-select {
+			max-width: 140px;
+		}
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.search-filters__right {
+		* + * {
+			margin-top: 10px;
+		}
+	}
+}

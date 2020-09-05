@@ -1,0 +1,235 @@
+.table-wrap {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: separate;
+	// Type
+	text-align: left;
+}
+
+tr {
+	margin: 30px;
+}
+
+th,
+td {
+	min-width: 160px;
+	padding: 20px 15px;
+	vertical-align: top;
+	// Type
+	line-height: 130%;
+}
+
+th {
+	// Type
+	font-family: $font-2;
+	font-weight: normal;
+}
+
+td {
+	a {
+		// Type
+		font-family: $font-2;
+		color: $ui-color-1;
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+			position: relative;
+			padding-left: 20px;
+			// Type
+			line-height: 130%;
+
+			&:before {
+				content: "\2013";
+				position: absolute;
+				top: 2px;
+				left: 0;
+				margin-right: 10px;
+			}
+		}
+
+		li + li {
+			margin-top: 10px;
+		}
+	}
+
+	input[type="text"] {
+		height: 40px;
+	}
+}
+
+.cell-center {
+	vertical-align: middle;
+}
+
+.cell-tooltip {
+	@include flex(flex);
+	@include flex_align_items(center);
+
+	.tooltip-icon {
+		margin-right: 10px;
+	}
+}
+
+tr.table-divide {
+	height: 120px;
+	border-top: 0;
+
+	* {
+		vertical-align: bottom;
+	}
+}
+
+tr:not(:first-child):not(.row-highlight) {
+	td,
+	th {
+		border-top: $border;
+	}
+}
+
+.row-highlight {
+	position: relative;
+	background: $ui-color-1;
+
+	* {
+		// Type
+		color: #fff;
+	}
+}
+
+.table-footer {
+	border-bottom: $border;
+	border-left: $border;
+	border-right: $border;
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, tablet-1) + 1) {
+	td,
+	th,
+	td li {
+		// Type
+		@include rem(22px);
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, tablet-2) + 1) and (max-width: map-get($breakpoints, tablet-1)) {
+	td,
+	th,
+	td li {
+		// Type
+		@include rem(20px);
+	}
+
+	label {
+		// Type
+		@include rem(20px);
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, tablet-2) + 1) {
+	table {
+		&:not(.table-simple) {
+			padding: 40px 60px;
+		}
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) and (max-width: map-get($breakpoints, tablet-2)) {
+	table {
+		&:not(.table-simple) {
+			padding: 20px 30px;
+		}
+	}
+
+	td,
+	th,
+	td li {
+		// Type
+		@include rem(18px);
+	}
+
+	label {
+		// Type
+		@include rem(18px);
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	table:not(.table-simple) {
+		padding: 40px 60px;
+		border: $border;
+	}
+
+	.table-2-col {
+		th {
+			width: 60%;
+			padding-right: 150px;
+		}
+
+		td {
+			width: 40%;
+		}
+	}
+
+	.table-footer {
+		@include flex(flex);
+		@include flex_align_items(center);
+		padding: 30px 60px;
+	}
+
+	.table-footer__options {
+		a + a {
+			margin-left: 30px;
+		}
+	}
+
+	.table-footer__right {
+		margin-left: auto;
+	}
+
+	td input[type="text"] {
+		// Type
+		@include rem(22px);
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	table {
+		padding: 10px 20px;
+		border: $border;
+	}
+
+	td,
+	th,
+	td li {
+		// Type
+		@include rem(16px);
+	}
+
+	label {
+		// Type
+		@include rem(16px);
+	}
+
+	.table-footer {
+		padding: 30px 20px;
+	}
+	
+	.table-footer__options {
+		a {
+			display: block;
+		}
+	}
+
+	.table-footer__right {
+		margin-top: 20px;
+	}
+}

@@ -1,0 +1,70 @@
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	border: none;
+	background: $ui-color-2;
+	// Type
+	font-family: $font-2;
+	text-align: center;
+	color: #fff;
+}
+
+//---- Variants
+.btn--light {
+	background: #fff;
+	// Type
+	color: $ui-color-2;
+}
+
+//---- Sizes
+.btn--small {
+	padding: 12px 16px;
+	// Type
+	@include rem(20px);
+}
+
+.btn--large {
+	padding: 30px 36px;
+	// Type
+	@include rem(26px);
+}
+
+.btn--wide {
+	width: 100%;
+}
+
+//---- Group
+.btn-group {
+	@include flex(flex);
+
+	.btn {
+		margin-left: 10px;
+		margin-right: 10px;
+		@include flex_shrink(0);
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, tablet-1) + 1) {
+	.btn {
+		padding: 14px 20px;
+		// Type
+		@include rem(22px);
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, tablet-1)) {
+	.btn {
+		padding: 12px 16px;
+		// Type
+		@include rem(18px);
+	}
+}

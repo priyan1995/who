@@ -1,0 +1,139 @@
+.link-block-large-outer {
+	background: #fff;
+	@include shadow-large;
+}
+
+.link-block--large-img {
+	&:nth-of-type(even) {
+		position: relative;
+
+		&:before {
+			content: "";
+			width: 2px;
+			height: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -1px;
+			background: $ui-color-3;
+		}
+	}
+
+	.link-block__img {
+		background: $ui-color-3 center / cover no-repeat;
+		overflow: hidden;
+	}
+
+	.link-block__txt {
+		position: relative;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			background: $ui-color-4;
+		}
+	}
+
+	.link-block__txt--alt:before {
+		background: $ui-color-3-4;
+	}
+
+	.link-block__title {
+		@inlcude rem(32px);
+	}
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, tablet-1) + 1) {
+	.link-block--large-img {
+		.link-block__img {
+			height: 280px;
+		}
+
+		.link-block__txt {
+			padding: 80px 60px;
+		}
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, tablet-2) + 1) and (max-width: map-get($breakpoints, tablet-1)) {
+	.link-block--large-img {
+		.link-block__img {
+			height: 240px;
+		}
+
+		.link-block__txt {
+			padding: 60px;
+		}
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, tablet-2) + 1) {
+	.link-block__txt {
+		&:before {
+			width: calc(100% - 120px);
+			height: 24px;
+			top: -12px;
+			left: 60px;
+		}
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) and (max-width: map-get($breakpoints, tablet-2)) {
+	.link-block--large-img {
+		.link-block__img {
+			height: 240px;
+		}
+
+		.link-block__txt {
+			padding: 40px;
+
+			&:before {
+				width: calc(100% - 80px);
+				height: 20px;
+				top: -10px;
+				left: 40px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	.link-block--small {
+		padding: 60px;
+	}
+
+	.grid--spaced-6 {
+		.link-block:nth-child(n+3) {
+			margin-top: 28px;
+		}
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.link-block--small {
+		padding: 30px 20px;
+	}
+
+	.link-block--small + .link-block--small {
+		margin-top: 20px;
+	}
+
+	.link-block--large-img {
+		.link-block__img {
+			height: 140px;
+		}
+
+		.link-block__txt {
+			padding: 30px 20px 20px 20px;
+
+			&:before {
+				width: calc(100% - 40px);
+				height: 10px;
+				top: -5px;
+				left: 20px;
+			}
+		}
+	}
+}

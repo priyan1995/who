@@ -1,0 +1,68 @@
+.site-banner {
+	
+}
+
+
+.site-banner--membership {
+	padding: 120px 0;
+	margin-bottom: -80px;
+	background: $ui-color-4;
+
+	.site-banner__title {
+		// Type
+		color: $ui-color-2;
+	}
+}
+
+.site-banner--slim {
+	padding: 50px 0 40px;
+	background: $ui-color-1;
+}
+
+.site-banner--renew {
+	padding: 50px 0;
+	background: $ui-color-1;
+
+	.site-banner__subtitle {
+		// Type
+		@include rem(36px);
+	}
+
+	.site-banner__list li {
+		position: relative;
+		margin: 3px 0;
+		padding-left: 24px;
+		list-style: none;
+
+		&:before {
+			content: "";
+			width: 8px;
+			height: 14px;
+			display: block;
+			position: absolute;
+			top: 5px;
+			left: 0;
+			background: image-url('icons/caret-right.svg') center / 100% no-repeat;
+		}
+
+		a {
+			// Type
+			line-height: 140%;
+			font-family: $font-2;
+		}
+	}
+}
+
+.site-banner--elections {
+	padding: 60px 0;
+
+	.site-banner__title {
+		// Type 
+		@include rem(52px);
+	}
+
+	.site-banner__bar {
+		padding: 15px;
+		background: $ui-color-3-3;
+	}
+}

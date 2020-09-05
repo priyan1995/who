@@ -1,0 +1,33 @@
+.site-banner--renew {
+	padding: 50px 0;
+	background: $ui-color-1;
+
+	.site-banner__subtitle {
+		// Type
+		@include rem(36px);
+	}
+
+	.site-banner__list li {
+		position: relative;
+		margin: 3px 0;
+		padding-left: 24px;
+		list-style: none;
+
+		&:before {
+			content: "";
+			width: 8px;
+			height: 14px;
+			display: block;
+			position: absolute;
+			top: 5px;
+			left: 0;
+			background: image-url('icons/caret-right.svg') center / 100% no-repeat;
+		}
+
+		a {
+			// Type
+			line-height: 140%;
+			font-family: $font-2;
+		}
+	}
+}

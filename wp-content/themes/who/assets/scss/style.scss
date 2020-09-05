@@ -1,0 +1,106 @@
+/*--------------------------------------------
+---- Base
+--------------------------------------------*/
+@import
+	'base/variables',
+	'base/functions',
+	'base/mixins',
+	'base/extends';
+
+
+
+/*--------------------------------------------
+---- Components
+--------------------------------------------*/
+//---- Common
+@import
+	'components/common/forms/forms',
+	'components/common/forms/form-wrapper',
+	'components/common/forms/form-footer',
+	'components/common/forms/form-message',
+	'components/common/forms/form-progress',
+	'components/common/forms/form-steps',
+	'components/common/reset',
+	'components/common/typography',
+	'components/common/tables',
+	'components/common/buttons',
+	'components/common/grid',
+	'components/common/helpers';
+
+//---- Global
+@import
+	'components/global/header',
+	'components/global/header-bar',
+	'components/global/header-main',
+	'components/global/logo',
+	'components/global/menu',
+	'components/global/footer',
+	'components/global/banners/banner',
+	'components/global/banners/banner-dashboard',
+	'components/global/banners/banner-elections',
+	'components/global/banners/banner-login',
+	'components/global/banners/banner-membership',
+	'components/global/banners/banner-renew',
+	'components/global/banners/banner-slim';
+
+//---- Third Party
+@import
+	'third-party/jcf';
+
+//---- Other
+@import
+	'components/other/resources',
+	'components/other/events',
+	'components/other/tabbed-section',
+	'components/other/election',
+	'components/other/link-block',
+	'components/other/detail-block',
+	'components/other/search',
+	'components/other/tooltip',
+	'components/other/modal',
+	'components/other/post',
+	'components/other/social';
+
+//---- Interactions
+@import
+	'interactions',
+	'transitions';
+
+
+
+/*--------------------------------------------
+---- General Styles
+--------------------------------------------*/
+html {
+	background: $ui-color-3;
+}
+
+body {
+	background: #fff;
+}
+
+hr {
+	height: 2px;
+	margin: 40px 0;
+	display: block;
+	clear: both;
+	background: $ui-color-3-1;
+}
+
+figure,
+picture img {
+	display: block;
+}
+
+img,
+picture {
+
+	max-width: 100%;
+	height: auto;
+}
+
+svg {
+	width: 100%;
+	height: auto;
+	display: block;
+}

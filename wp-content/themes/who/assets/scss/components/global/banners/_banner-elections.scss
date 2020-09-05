@@ -1,0 +1,29 @@
+.site-banner--elections {
+	.site-banner__bar {
+		padding: 15px;
+		background: $ui-color-3-3;
+	}
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	.site-banner--elections {
+		padding: 60px 0;
+
+		.site-banner__title {
+			// Type 
+			@include rem(52px);
+		}
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.site-banner--elections {
+		padding: 30px 0 40px;
+
+		.site-banner__title {
+			// Type 
+			@include rem(32px);
+		}
+	}
+}

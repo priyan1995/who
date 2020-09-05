@@ -1,0 +1,14 @@
+//---- Clearfix
+%clearfix {
+	&:after {
+		display: block;
+		clear: both;
+		content: '';
+	}
+}
+
+//---- Remove Text
+%remove-text {
+	overflow: hidden;
+	text-indent: -99999px;
+}

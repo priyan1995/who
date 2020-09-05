@@ -1,0 +1,88 @@
+.form-wrapper {
+	form,
+	.form__inner {
+		label + *,
+		.jcf-select:not(:first-child) {
+			margin-top: 8px;
+		}
+	}
+}
+
+.form-wrapper--light {
+	background: #fff;
+	@include shadow-large;
+
+	.form-footer {
+		margin-top: 30px;
+	}
+}
+
+.form-wrapper__footer {
+	background: $ui-color-3;
+	border-top: $border;
+	// Type
+	text-align: center;
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	.form-wrapper {
+		form,
+		.form__inner {
+			> *:not(select):not(label) + *:not(.form__body):not(.form-footer):not(.form-step) {
+				margin-top: 30px;
+			}
+		}
+		
+		label.label-large + * {
+			margin-top: 20px;
+		}
+	}
+
+	.form-wrapper__header {
+		padding: 0 60px 30px 60px;
+	}
+
+	.form-wrapper--slim {
+		padding-top: 60px;
+
+		form {
+			padding: 0 60px 60px 60px;
+		}
+	}
+
+	.form-wrapper__footer {
+		padding: 40px;
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.form-wrapper {
+		form,
+		.form__inner {
+			> *:not(select):not(label) + *:not(.form__body):not(.form-footer):not(.form-step) {
+				margin-top: 20px;
+			}
+		}
+
+		label.label-large + * {
+			margin-top: 10px;
+		}
+	}
+
+	.form-wrapper__header {
+		padding: 0 25px 25px 25px;
+	}
+
+	.form-wrapper--slim {
+		padding-top: 25px;
+
+		form {
+			padding: 0 25px 25px 25px;
+		}
+	}
+
+	.form-wrapper__footer {
+		padding: 20px;
+	}
+}

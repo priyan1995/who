@@ -1,0 +1,114 @@
+.events__txt {
+	background: $ui-color-4;
+}
+
+.event {
+	position: relative;
+	background: $ui-color-1;
+}
+
+.event__img {
+	background: transparent center / cover no-repeat;
+}
+
+.event__tag {
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: -10px;
+	background: #fff;
+	@include shadow-small;
+	// Type
+	font-family: $font-2;
+	color: $ui-color-2;
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, tablet-1) + 1) {
+	.events__txt {
+		padding-bottom: 300px;
+		margin-bottom: -240px;
+	}
+
+	.events__title {
+		@include rem(52px);
+	}
+
+	.event__img {
+		height: 240px;
+	}
+
+	.event__title {
+		// Type
+		@include rem(32px);
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) and (max-width: map-get($breakpoints, tablet-1)) {
+	.events__title {
+		@include rem(42px);
+	}
+
+	.event__img {
+		height: 200px;
+	}
+
+	.event__title {
+		// Type
+		@include rem(26px);
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, tablet-2) + 1) and (max-width: map-get($breakpoints, tablet-1)) {
+	.events__txt {
+		padding-bottom: 230px;
+		margin-bottom: -200px;
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) and (max-width: map-get($breakpoints, tablet-2)) {
+	.events__txt {
+		padding-bottom: 130px;
+		margin-bottom: -100px;
+	}
+
+	.event {
+		@include flex(flex);
+	}
+
+	.event__img {
+		width: 300px;
+		@include flex_shrink(0);
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	.event__tag {
+		padding: 10px 15px;
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.events__txt {
+		padding-bottom: 200px;
+		margin-bottom: -190px;
+	}
+
+	.events__title {
+		// Type
+		@include rem(24px);
+	}
+
+	.event + .event {
+		margin-top: 10px;
+	}
+
+	.event__img {
+		height: 190px;
+		@include flex_shrink(0);
+	}
+
+	.event__tag {
+		padding: 8px 10px;
+	}
+}

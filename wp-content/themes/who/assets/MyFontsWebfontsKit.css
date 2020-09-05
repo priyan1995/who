@@ -1,0 +1,58 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3449639, 2017-09-11T04:08:48-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: HelveticaNeueLT-ThinCondObl by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-37-thin-condensed-oblique/
+ * 
+ * Webfont: HelveticaNeueLT-CondensedObl by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-57-condensed-oblique/
+ * 
+ * Webfont: HelveticaNeueLT-BoldCondObl by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-77-bold-condensed-oblique/
+ * 
+ * Webfont: HelveticaNeueLT-ThinCond by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-37-thin-condensed/
+ * 
+ * Webfont: HelveticaNeueLT-Condensed by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-57-condensed/
+ * 
+ * Webfont: HelveticaNeueLT-BoldCond by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/neue-helvetica/helvetica-77-bold-condensed/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3449639
+ * Licensed pageviews: 250,000
+ * Webfonts copyright: Part of the digitally encoded machine readable outline data for producing the Typefaces provided is copyrighted &#x00A9; 1981 - 2006 Linotype GmbH, www.linotype.com. All rights reserved. This software is the property of Linotype GmbH, and may not be repro
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/34a327");
+
+  
+@font-face {font-family: 'HelveticaNeueLT-ThinCondObl';src: url('webfonts/34A327_0_0.eot');src: url('webfonts/34A327_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34A327_0_0.woff2') format('woff2'),url('webfonts/34A327_0_0.woff') format('woff'),url('webfonts/34A327_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNeueLT-CondensedObl';src: url('webfonts/34A327_1_0.eot');src: url('webfonts/34A327_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34A327_1_0.woff2') format('woff2'),url('webfonts/34A327_1_0.woff') format('woff'),url('webfonts/34A327_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNeueLT-BoldCondObl';src: url('webfonts/34A327_2_0.eot');src: url('webfonts/34A327_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34A327_2_0.woff2') format('woff2'),url('webfonts/34A327_2_0.woff') format('woff'),url('webfonts/34A327_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNeueLT-ThinCond';src: url('webfonts/34A327_3_0.eot');src: url('webfonts/34A327_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34A327_3_0.woff2') format('woff2'),url('webfonts/34A327_3_0.woff') format('woff'),url('webfonts/34A327_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNeueLT-Condensed';src: url('webfonts/34A327_4_0.eot');src: url('webfonts/34A327_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34A327_4_0.woff2') format('woff2'),url('webfonts/34A327_4_0.woff') format('woff'),url('webfonts/34A327_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNeueLT-BoldCond';src: url('webfonts/34A327_5_0.eot');src: url('webfonts/34A327_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34A327_5_0.woff2') format('woff2'),url('webfonts/34A327_5_0.woff') format('woff'),url('webfonts/34A327_5_0.ttf') format('truetype');}
+ 

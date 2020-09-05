@@ -1,0 +1,56 @@
+.form-progress {
+	position: relative;
+	margin-bottom: 50px;
+	padding-bottom: 25px;
+}
+
+.form-progress__subtitle {
+	padding-bottom: 10px;
+	// Type
+	@include rem(24px);
+}
+
+.form-progress__step.active {	
+	&:after {
+		content: "";
+		width: 50%;
+		display: block;
+		position: absolute;
+		background: $ui-color-4;
+	}
+
+	&:nth-child(1):after {
+		left: 0;
+	}
+
+	&:nth-child(2):after {
+		right: 0;
+	}
+}
+
+//---- Responsive
+@media screen and (min-width: map-get($breakpoints, mobile-1) + 1) {
+	.form-progress {
+		border-bottom: 10px solid $ui-color-5;
+	}
+
+	.form-progress__step.active {
+		&:after {
+			height: 20px;
+			bottom: -15px;
+		}
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile-1)) {
+	.form-progress {
+		border-bottom: 4px solid $ui-color-5;
+	}
+
+	.form-progress__step.active {
+		&:after {
+			height: 10px;
+			bottom: -7px;
+		}
+	}
+}
