@@ -4676,15 +4676,15 @@ svg {
 }
 
 @media (max-width:671px){
-    #main-menu .site-header__menu-wrapper-inner .false{
+    .site-header__menu-wrapper-inner .false {
         width:100%;
     }
 
-    #main-menu .site-header__menu-wrapper-inner .menu-item .dropdown-item{
+    #main-menu  .menu-item .dropdown-item{
         font-size: 18px;
     }
 
-    #main-menu .site-header__menu-wrapper-inner .menu-item .dropdown-item::after{
+    #main-menu  .menu-item>a:after{
         display: none;
     }
 
