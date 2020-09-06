@@ -1,4 +1,3 @@
-
 <?php
 /*
 Template Name: page-3 Template
@@ -22,73 +21,37 @@ get_header();
     </a>
 
     <div class="section section--large grid grid--spaced">
-        <div class="resources__left grid__col grid__col--4 spacing-medium">
-            <ul class="resources__menu">
-                <li class="menu-item">
-                    <a href="#">About WHO</a>
-                </li>
+        <div class="resources__left grid__col grid__col--4 spacing-medium">  
 
-                <li class="menu-item">
-                    <a href="#">Webinars</a>
-                </li>
+            <ul class="resources__menu">  
+                <?php
+                $resMenu = new WP_Query(array('orderby' => 'date', 'post_type' => 'resourse_menu', 'order' => 'ASC'));
+                if ($resMenu->have_posts()) :
+                    while ($resMenu->have_posts()) :
+                        $resMenu->the_post();
+                ?>
+                        <li class="menu-item
+                <?php
+                        $sub_men = get_field('sub_menu');
+                        if ($sub_men == true) {
+                ?>
+                 menu-item--has-sub-menu <?php } ?> ">
+                            <a href="<?php the_field('resource_menu_link'); ?>"><?php the_title(); ?></a>
+                            <?php the_field('sub_menus'); ?>
 
-                <li class="menu-item menu-item--has-sub-menu">
-                    <a href="#">Official Documents</a>
-
-                    <ul class="sub-menu">
-                        <li class="sub-menu-item">
-                            <a href="#">Sub menu item</a>
+                            <!-- <ul class="sub-menu">
+                                <li class="sub-menu-item active">
+                                    <a href="#">Tuberculosis</a>
+                                </li>
+                            </ul> -->
                         </li>
+                <?php
+                    endwhile;
+                endif;
+                ?>
 
-                        <li class="sub-menu-item">
-                            <a href="#">Sub menu item</a>
-                        </li>
 
-                        <li class="sub-menu-item">
-                            <a href="#">Sub menu item</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="menu-item menu-item--has-sub-menu menu-item--sub-menu-active active">
-                    <a href="#">Scientific Sections</a>
-
-                    <ul class="sub-menu">
-                        <li class="sub-menu-item active">
-                            <a href="#">Tuberculosis</a>
-                        </li>
-
-                        <li class="sub-menu-item">
-                            <a href="#">HIV</a>
-                        </li>
-
-                        <li class="sub-menu-item">
-                            <a href="#">Adult &amp; Child Lung Health</a>
-                        </li>
-
-                        <li class="sub-menu-item">
-                            <a href="#">Tobacco Control</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="menu-item menu-item--has-sub-menu">
-                    <a href="#">WHO Regions</a>
-
-                    <ul class="sub-menu">
-                        <li class="sub-menu-item">
-                            <a href="#">Sub menu item</a>
-                        </li>
-
-                        <li class="sub-menu-item">
-                            <a href="#">Sub menu item</a>
-                        </li>
-
-                        <li class="sub-menu-item">
-                            <a href="#">Sub menu item</a>
-                        </li>
-                    </ul>
-                </li>
+               
             </ul>
 
         </div>
@@ -115,6 +78,6 @@ get_header();
     </div>
 </section>
 
-<?php 
- get_footer();
+<?php
+get_footer();
 ?>

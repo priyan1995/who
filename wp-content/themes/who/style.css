@@ -1921,7 +1921,8 @@ body.lock-scroll {
     font-size: 1.125rem
 }
 
-.site-menu-secondary .menu-item:not(.menu-item--has-sub-menu) .menu-item__icon svg {
+.site-menu-secondary .menu-item:not(.menu-item--has-sub-menu) .menu-item__icon svg,
+#resources-menu .menu-item:not(.menu-item-has-children) .menu-item__icon svg {
     width: 26px;
     display: inline-block;
     margin-right: 2px;
@@ -1929,24 +1930,33 @@ body.lock-scroll {
 }
 
 .site-menu-secondary .menu-item:not(.menu-item--has-sub-menu) .menu-item__icon svg path,
-.site-menu-secondary .menu-item:not(.menu-item--has-sub-menu) .menu-item__icon svg circle {
+.site-menu-secondary .menu-item:not(.menu-item--has-sub-menu) .menu-item__icon svg circle,
+
+#resources-menu  .menu-item:not(.menu-item-has-children) .menu-item__icon svg path,
+#resources-menu  .menu-item:not(.menu-item-has-children) .menu-item__icon svg circle{
     fill: #004a8f
 }
 
-.site-menu-secondary .menu-item--has-sub-menu {
+.site-menu-secondary .menu-item--has-sub-menu ,
+
+#resources-menu .menu-item-has-children {
     position: relative;
     color: #1a4a83;
     font-family: HelveticaNeueLT-BoldCond, "Arial", sans-serif
 }
 
-.site-menu-secondary .menu-item--has-sub-menu>a .menu-item__icon {
+.site-menu-secondary .menu-item--has-sub-menu>a .menu-item__icon,
+
+#resources-menu .menu-item-has-children>a .menu-item__icon{
     width: 12px;
     display: block;
     position: relative;
     top: -1px
 }
 
-.site-menu-secondary .menu-item--has-sub-menu.active>a .menu-item__icon {
+.site-menu-secondary .menu-item--has-sub-menu.active>a .menu-item__icon,
+#resources-menu .menu-item-has-children.active>a .menu-item__icon
+ {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg)
@@ -2100,13 +2110,16 @@ body.lock-scroll {
     .site-menu-secondary .menu-item {
         display: inline-block
     }
-    .site-menu-secondary .menu-item--has-sub-menu>a {
+    .site-menu-secondary .menu-item--has-sub-menu>a,
+    #resources-menu .menu-item-has-children>a {
         right: 0
     }
-    .site-menu-secondary .menu-item--has-sub-menu>a .menu-item__icon {
+    .site-menu-secondary .menu-item--has-sub-menu>a .menu-item__icon,
+    #resources-menu .menu-item-has-children>a .menu-item__icon {
         margin-left: 5px
     }
-    .site-menu-secondary .menu-item--has-sub-menu.active>a:after {
+    .site-menu-secondary .menu-item--has-sub-menu.active>a:after, 
+    #resources-menu .menu-item-has-children.active>a:after{
         -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
         transform: rotate(180deg)
@@ -2136,7 +2149,9 @@ body.lock-scroll {
     .site-menu-secondary .sub-menu .sub-menu-item+.sub-menu-item {
         margin-top: 20px
     }
-    .site-menu-secondary .menu-item:not(.menu-item--has-sub-menu) .menu-item__icon {
+    .site-menu-secondary .menu-item:not(.menu-item--has-sub-menu) .menu-item__icon,
+    #resources-menu .menu-item:not(.menu-item-has-children) .menu-item__icon
+      {
         margin-right: 5px
     }
 }
@@ -2280,22 +2295,29 @@ body.lock-scroll {
         font-family: HelveticaNeueLT-BoldCond, "Arial", sans-serif;
         color: #fff
     }
-    .site-menu-secondary .menu-item:not(.menu-item--has-sub-menu) .menu-item__icon svg {
+    .site-menu-secondary .menu-item:not(.menu-item--has-sub-menu) .menu-item__icon svg,
+    #resources-menu .menu-item:not(.menu-item-has-children) .menu-item__icon svg
+    {
         display: none
     }
-    .site-menu-secondary .menu-item--has-sub-menu>a {
+    .site-menu-secondary .menu-item--has-sub-menu>a,
+    #resources-menu .menu-item-has-children>a
+     {
         width: 100%;
         display: -ms-inline-flexbox;
         display: -webkit-inline-flex;
         display: inline-flex
     }
-    .site-menu-secondary .menu-item--has-sub-menu>a .menu-item__icon {
+    .site-menu-secondary .menu-item--has-sub-menu>a .menu-item__icon,
+    #resources-menu .menu-item-has-children>a .menu-item__icon, {
         margin-left: 10px
     }
-    .site-menu-secondary .menu-item--has-sub-menu>a .menu-item__icon svg path {
+    .site-menu-secondary .menu-item--has-sub-menu>a .menu-item__icon svg path,
+    #resources-menu .menu-item-has-children>a .menu-item__icon svg path {
         stroke: #fff
     }
-    .site-menu-secondary .menu-item--has-sub-menu.active>a:after {
+    .site-menu-secondary .menu-item--has-sub-menu.active>a:after,
+    #resources-menu .menu-item-has-children.active>a:after {
         -webkit-transform: rotate(180deg) translateY(50%);
         -ms-transform: rotate(180deg) translateY(50%);
         transform: rotate(180deg) translateY(50%)
@@ -3006,11 +3028,13 @@ body.lock-scroll {
     color: #fcb814
 }
 
-.resources__menu .menu-item--has-sub-menu {
+.resources__menu .menu-item--has-sub-menu,
+#resources-menu .menu-item-has-children {
     position: relative
 }
 
-.resources__menu .menu-item--has-sub-menu>a:after {
+.resources__menu .menu-item--has-sub-menu>a:after,
+#resources-menu .menu-item-has-children>a:after {
     content: "";
     width: 36px;
     height: 36px;
@@ -3024,11 +3048,13 @@ body.lock-scroll {
     pointer-events: none
 }
 
-.resources__menu .menu-item--has-sub-menu.menu-item--sub-menu-active>a:after {
+.resources__menu .menu-item--has-sub-menu.menu-item--sub-menu-active>a:after,
+#resources-menu .menu-item-has-children.menu-item--sub-menu-active>a:after {
     background: url("assets/img/icons/minus-light.svg") center/18px no-repeat
 }
 
-.resources__menu .menu-item--has-sub-menu:not(.menu-item--sub-menu-active) .sub-menu {
+.resources__menu .menu-item--has-sub-menu:not(.menu-item--sub-menu-active) .sub-menu,
+#resources-menu .menu-item-has-children:not(.menu-item--sub-menu-active) .sub-menu {
     display: none
 }
 
@@ -4250,7 +4276,8 @@ body.lock-scroll {
     color: #fcb814
 }
 
-.no-touch .resources__menu .menu-item--has-sub-menu a:hover:after {
+.no-touch .resources__menu .menu-item--has-sub-menu a:hover:after,
+#resources-menu .menu-item-has-children a:hover:after{
     border-color: #fff
 }
 
@@ -4282,16 +4309,21 @@ body.lock-scroll {
     .site-menu-primary .menu-item a:hover span path {
         stroke: #fff
     }
-    .site-menu-secondary .menu-item:not([class*="menu-item--has-sub-menu"]) a:hover {
+    .site-menu-secondary .menu-item:not([class*="menu-item--has-sub-menu"]) a:hover,
+    #resources-menu .menu-item:not([class*="menu-item--has-sub-menu"]) a:hover {
         color: #2a70b8
     }
-    .site-menu-secondary .menu-item:not([class*="menu-item--has-sub-menu"]) a:hover .menu-item__icon svg path {
+    .site-menu-secondary .menu-item:not([class*="menu-item--has-sub-menu"]) a:hover .menu-item__icon svg path,
+    #resources-menu .menu-item:not([class*=".menu-item-has-children"]) a:hover .menu-item__icon svg path
+     {
         fill: #2a70b8
     }
-    .site-menu-secondary .menu-item--has-sub-menu a:hover {
+    .site-menu-secondary .menu-item--has-sub-menu a:hover,
+    #resources-menu .menu-item--has-sub-menu a:hover{
         color: #2a70b8
     }
-    .site-menu-secondary .menu-item--has-sub-menu a:hover path {
+    .site-menu-secondary .menu-item--has-sub-menu a:hover path,
+    #resources-menu .menu-item--has-sub-menu a:hover path{
         stroke: #2a70b8
     }
 }
@@ -4450,7 +4482,8 @@ body.lock-scroll {
     transition: color ease .25s
 }
 
-.no-touch .resources__menu .menu-item--has-sub-menu a:after {
+.no-touch .resources__menu .menu-item--has-sub-menu a:after,
+#resources-menu .menu-item--has-sub-menu a:after{
     -webkit-transition: border-color ease .25s;
     -ms-transition: border-color ease .25s;
     transition: border-color ease .25s
@@ -4569,7 +4602,9 @@ svg {
     transition: 0.5s;
 }
 
-.dropdown-menu{
+#main-menu .dropdown-menu,
+#resources-menu .dropdown-menu
+{
     display: none;
 }
 
@@ -4634,22 +4669,22 @@ svg {
         background-repeat: no-repeat;
     }
 
-    .dropdown-menu a::after{
+    #main-menu .dropdown-menu a::after{
         display: none;
     }
 
 }
 
 @media (max-width:671px){
-    .site-header__menu-wrapper-inner .false{
+    #main-menu .site-header__menu-wrapper-inner .false{
         width:100%;
     }
 
-    .site-header__menu-wrapper-inner .menu-item .dropdown-item{
+    #main-menu .site-header__menu-wrapper-inner .menu-item .dropdown-item{
         font-size: 18px;
     }
 
-    .site-header__menu-wrapper-inner .menu-item .dropdown-item::after{
+    #main-menu .site-header__menu-wrapper-inner .menu-item .dropdown-item::after{
         display: none;
     }
 

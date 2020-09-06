@@ -43,7 +43,8 @@ add_action( 'after_setup_theme', 'register_nero_primary_menu' );
 function register_nero_primary_menu() {
 	register_nav_menus(array( 
 		'primary'	=> 	__( 'Primary Menu', 'Who' ),
-		'footer'	=>	__( 'Footer Menu', 'Who' )
+		'footer'	=>	__( 'Footer Menu', 'Who' ),
+		// 'resources'	=>	__( 'Resources Menu', 'Who' ),
 
 	 ));
 }
