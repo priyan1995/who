@@ -120,7 +120,7 @@
 								</span>
 							</a>
 
-							<ul class="sub-menu"">
+							<ul class="sub-menu">
 								<li class=" sub-menu-item">
 								<a href="#">Español</a>
 						</li>
