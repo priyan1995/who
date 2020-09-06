@@ -132,21 +132,21 @@
 					</ul>
 
 					<?php
-                //   wp_nav_menu(
-                //     array(
-                //       'depth'       => 10,
-                //       'theme_location'  => 'primary',
-                //       'container_class' => 'false',
-                //       'container_id'    => '',
-                //       'menu_class'      => 'site-menu-primary',
-                //       'fallback_cb'     => '',
-                //       'menu_id'         => 'main-menu',
-                //       'walker'          => new WP_Bootstrap_Navwalker(),
-                //     )
-                //   );
-				  ?>
-				  
-					<ul class="site-menu-primary">
+					wp_nav_menu(
+						array(
+							'depth'       => 10,
+							'theme_location'  => 'primary',
+							'container_class' => 'false',
+							'container_id'    => '',
+							'menu_class'      => 'site-menu-primary',
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu',
+							'walker'          => new WP_Bootstrap_Navwalker(),
+						)
+					);
+					?>
+
+					<!-- <ul class="site-menu-primary">
 
 						<li class="menu-item menu-item--membership <?php echo $current_class; ?>">
 							<a href="#">
@@ -193,7 +193,7 @@
 								</li>
 							</ul>
 						</li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 		</div>
