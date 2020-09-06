@@ -4690,3 +4690,25 @@ svg {
 
 
 }
+
+.pd-blog-view_rel .pd-blg-card{
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0px 19px 54px -8px #0000002e;
+    border: 1px solid #ffffff21;
+    transition: 0.5s;
+}
+
+.pd-blog-view_rel .pd-blg-card:hover{
+    transition: 0.5s;
+    transform: translateY(-5px);
+}
+
+.pd-blog-view_rel .pd-blg-card p{
+    padding: 10px 0;
+    color: white;
+}
+
+.pd-blog-view_rel .pd-blg-card img{
+    width: 130px;
+}
