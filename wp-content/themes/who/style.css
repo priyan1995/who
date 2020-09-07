@@ -4733,3 +4733,19 @@ svg {
 .tool-container.tool-top .arrow {
     border-color: transparent transparent #2a70b8 !important; 
 }
+
+@media (max-width:670px){
+    #footer,
+    .menu-footer-menu-container{
+        width:100%;
+        text-align: center;
+    }
+    .site-footer__inner .social {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    .site-footer__copy{
+        text-align: center;
+    }
+}
