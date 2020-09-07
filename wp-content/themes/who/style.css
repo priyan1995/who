@@ -4595,6 +4595,7 @@ svg {
     margin-left: -10px;
     top: 35%;
     transition: 0.5s;
+    margin-top: -6px;
 }
 
 .site-menu-primary .menu-item a:hover> .menu-item__icon img{
@@ -4711,4 +4712,24 @@ svg {
 
 .pd-blog-view_rel .pd-blg-card img{
     width: 130px;
+}
+
+#glt-translate-trigger{
+    padding: 6px 15px 10px 15px !important;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 12px;
+    
+}
+
+.tool-container.tool-top {
+    top: 40px !important;
+    bottom: auto !important;
+    background: #2a70b8;
+    border: #2a70b8;
+    box-shadow: none;
+}
+
+.tool-container.tool-top .arrow {
+    border-color: transparent transparent #2a70b8 !important; 
 }

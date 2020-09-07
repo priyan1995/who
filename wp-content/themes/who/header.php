@@ -112,7 +112,7 @@
 							</a>
 						</li>
 
-						<li class="menu-item menu-item--has-sub-menu">
+						<!-- <li class="menu-item menu-item--has-sub-menu">
 							<a href="#">
 								English
 								<span class="menu-item__icon">
@@ -128,7 +128,7 @@
 							<a href="#">Français</a>
 						</li>
 					</ul>
-					</li>
+					</li> -->
 					</ul>
 
 					<?php
@@ -145,6 +145,17 @@
 						)
 					);
 					?>
+
+					<style>
+						.goog-te-banner-frame {
+							display: none;
+						}
+
+						.tool-container.tool-top {
+							top: 35px !important;
+							bottom: auto !important;
+						}
+					</style>
 
 					<!-- <ul class="site-menu-primary">
 
