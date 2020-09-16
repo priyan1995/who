@@ -25,15 +25,15 @@ get_header();
 
             <div class="tab resources__menu">
 
-               
+
 
                 <!-- tab menu -->
                 <?php
                 $terms = get_terms(array(
                     'taxonomy'   => 'blog_category',
                     'hide_empty' => true,
-                    'orderby'=>'taxonomy'
-                    
+                    'orderby' => 'taxonomy'
+
                 ));
 
                 foreach ($terms as $term) {
@@ -44,10 +44,9 @@ get_header();
                 ?>
                     <button class=" menu-item <?php if ($child == 2) {
                                                     echo 'pd-child-menu-level-2';
-                                                }elseif($child == 3){
+                                                } elseif ($child == 3) {
                                                     echo 'pd-child-menu-level-3';
-                                                } ?>"
-                                                 onclick="openCity(event, '<?php echo $term->term_id; ?>')">
+                                                } ?>" onclick="openCity(event, '<?php echo $term->term_id; ?>')">
                         <?php echo $term->name; ?>
                     </button>
                 <?php  } ?>
@@ -64,7 +63,7 @@ get_header();
                 'hide_empty' => true,
                 'post_type' => 'blog_post'
             ));
-         
+
             foreach ($terms as $term) {
 
             ?>
@@ -76,8 +75,9 @@ get_header();
 
                 ?>
                         <div id="<?php echo $term->term_id; ?>" class="tabcontent pd-blog-items-short-desc">
-                        
-                            <pre><?php //var_dump($term); ?></pre>
+
+                            <pre><?php //var_dump($term); 
+                                    ?></pre>
 
                             <a href="<?php the_permalink(); ?>">
                                 <p><?php the_title(); ?> - <?php the_field('short_description_blog') ?></p>
