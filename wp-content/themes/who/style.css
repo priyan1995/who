@@ -4749,3 +4749,43 @@ svg {
         text-align: center;
     }
 }
+.resources__menu .menu-item {
+    text-align: left;
+    width: 100%;
+
+}
+
+.pd-blog-items-short-desc a{
+    color: #2a70b8;
+    font-family: HelveticaNeueLT-BoldCond,"Arial",sans-serif;
+    border-bottom: 2px solid transparent;
+    
+}
+
+.pd-blog-items-short-desc p{
+    padding-bottom: 20px;
+    border-bottom: 2px solid #cadaec;
+}
+
+button.menu-item.pd-child-menu-level-2 {
+    padding-left: 40px;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: inherit;
+}
+
+button.menu-item.pd-child-menu-level-3 {
+    padding-left: 50px;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent:nth-child(1) {
+    display: block;
+}

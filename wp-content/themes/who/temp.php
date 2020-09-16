@@ -48,7 +48,7 @@ get_header();
                                                     echo 'pd-child-menu-level-3';
                                                 } ?>"
                                                  onclick="openCity(event, '<?php echo $term->term_id; ?>')">
-                        <?php echo $term->name; ?>
+                        <?php echo $term->name; ?><?php echo $child; ?>
                     </button>
                 <?php  } ?>
             </div>
