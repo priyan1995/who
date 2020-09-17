@@ -1,6 +1,8 @@
 <?php
+/*
+Template Name: Terms and Conditions Page Template
+*/
 get_header();
-the_post();
 ?>
 
 <div class="site-header-spacer"></div>
@@ -13,7 +15,7 @@ the_post();
 
     <div class="pd-post-top-line-date">
         <div class="section section--large">
-            <h3><?php the_date(); ?></h3>
+            <h3><?php the_field('subtitle_t_c'); ?></h3>
         </div>
     </div>
 </section>
@@ -22,8 +24,8 @@ the_post();
 
     <div class="pd-blog-content">
 
-        <img src="<?php the_field('image_blog'); ?>">
-        <p class="pd-blog-para"><?php the_field('infromation_blog'); ?></p>
+        <img src="<?php the_field('image_t_c'); ?>">
+        <p class="pd-blog-para"><?php the_field('content_t_c'); ?></p>
     </div>
 
 

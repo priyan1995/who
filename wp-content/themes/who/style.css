@@ -4789,3 +4789,39 @@ button.menu-item.pd-child-menu-level-3 {
 .tabcontent:nth-child(1) {
     display: block;
 }
+
+/* new blog */
+
+.pd-white-banner{
+    background: white !important;
+    padding-top: 30px;
+}
+
+.pd-white-banner h1{
+    color: #004a8f !important;
+    font-size: 40px !important;
+}
+
+.pd-blog-content img{
+    float: right;
+    margin: 10px;  
+}
+
+.pd-post-top-line-date{
+    background: #007cba26;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.pd-post-top-line-date h3{
+    font-size: 20px;
+    color: #004a8f;
+    text-transform: capitalize;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.pd-blog-content p{
+    line-height: 24px;
+    font-size: 16px;
+}
