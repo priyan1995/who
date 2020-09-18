@@ -4825,3 +4825,29 @@ button.menu-item.pd-child-menu-level-3 {
     line-height: 24px;
     font-size: 16px;
 }
+
+.resources .resources__left{
+    height: 500px;
+    overflow: auto;
+}
+
+/* width */
+.resources .resources__left::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .resources .resources__left::-webkit-scrollbar-track {
+    background: #004a8f; 
+  }
+   
+  /* Handle */
+  .resources .resources__left::-webkit-scrollbar-thumb {
+    background: #2a70b8; 
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  .resources .resources__left::-webkit-scrollbar-thumb:hover {
+    background: #2a70b8; 
+  }
