@@ -41,20 +41,42 @@ get_header();
 
                     $slug = $term->slug;
                     $termID = $term->term_id;
-                    $child = get_field('taxonomy_level', $term);
+                    $child = get_field('has_sub_menu', $term);
 
                 ?>
-                    <button class=" menu-item  pd-main-menu<?php echo $termID; ?> <?php if ($child == 2) {
-                                                    echo 'pd-child-menu-level-2 ';
-                                                    echo 'toggle-child-2-'.$termID;
-                                                } elseif ($child == 3) {
-                                                    echo 'pd-child-menu-level-3 ';
-                                                    echo 'toggle-child-3-'.$termID;
-                                                } ?>" onclick="openCity(event, '<?php echo $term->term_id; ?>')">
-                        <?php echo $term->name; ?>
 
-                        <!-- <input type="hidden" value="" -->
+                    <button class=" menu-item  pd-main-menu<?php echo $termID; ?> <?php if ($child == "2") {
+                                                                                        echo 'pd-child-menu-level-2 ';
+                                                                                        echo 'toggle-child-2-' . $termID;
+                                                                                    } elseif ($child == "3") {
+                                                                                        echo 'pd-child-menu-level-3 ';
+                                                                                        echo 'toggle-child-3-' . $termID;
+                                                                                    } elseif ($child == "1") {
+                                                                                        echo "pd-main-menu";
+                                                                                    } ?>" onclick="openCity(event, '<?php echo $term->term_id; ?>')">
+                        <?php echo $term->name; ?>
                     </button>
+
+                    <?php
+                    /*
+                     if ($child == "1") { ?>
+
+                        <button class=" menu-item  pd-main-menu pd-main-menu-level-1" id="<?php echo $termID; ?>" onclick="openCity(event, '<?php echo $term->term_id; ?>')">
+                            <?php echo $term->name; ?>
+                        </button>
+
+                    <?php  } elseif ($child == "2") { ?>
+                        <button class=" menu-item  pd-main-menu pd-child-menu-level-2" id="<?php echo $termID; ?>" onclick="openCity(event, '<?php echo $term->term_id; ?>')">
+                            <?php echo $term->name; ?>
+                        </button>
+
+                    <?php } elseif ($child == "3") { ?>
+                        <button class=" menu-item  pd-main-menu pd-child-menu-level-3" id="<?php echo $termID; ?>" onclick="openCity(event, '<?php echo $term->term_id; ?>')">
+                            <?php echo $term->name; ?>
+                        </button>
+
+                    <?php  } */ ?>
+
                 <?php  } ?>
             </div>
 
@@ -116,11 +138,12 @@ get_header();
         evt.currentTarget.className += " active";
     }
 
-    $(document).ready(function() {
-        $(".menu-item").click(function() {
-            $(".toggle-child-3-15").toggle();
-        });
-    });
+    // $(document).ready(function() {
+    //     $(".pd-main-menu").click(function() {
+    //         $(".pd-child-menu-level-2").toggle();
+    //         $(".pd-child-menu-level-3").toggle();
+    //     });
+    // });
 </script>
 
 <?php
