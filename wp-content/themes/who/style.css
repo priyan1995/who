@@ -4862,3 +4862,19 @@ button.menu-item.pd-child-menu-level-3 {
           text-align: right;
       }
   }
+
+  #main-menu .menu-item-has-children:nth-child(1) a::after{
+    background-color: #fcb814;
+    transition: 0.5s;
+  }
+
+  #main-menu .menu-item-has-children:nth-child(2) a::after{
+    background-color: #a7dcf2;
+    transition: 0.5s;
+  }
+
+  #main-menu .menu-item-has-children:nth-child(2) a:hover::after,
+  #main-menu .menu-item-has-children:nth-child(1) a:hover::after{
+    transition: 0.5s;
+    background-color: #2a70b8;
+  }
