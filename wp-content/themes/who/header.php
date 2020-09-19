@@ -64,7 +64,7 @@
 		<div class="site-header__inner section section--large grid grid--spaced">
 			<div class="site-header__logo-wrapper grid__col grid__col--5 grid__col--m-12">
 				<a class="site-logo" href="/who">
-
+					<?php the_custom_logo();  ?>
 				</a>
 			</div>
 

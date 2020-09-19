@@ -4851,3 +4851,14 @@ button.menu-item.pd-child-menu-level-3 {
   .resources .resources__left::-webkit-scrollbar-thumb:hover {
     background: #2a70b8; 
   }
+
+  .custom-logo-link img{
+    width: 150px;
+    padding-top: 20px;
+  }
+
+  @media (max-width:1200px){
+      .site-header__logo-wrapper{
+          text-align: right;
+      }
+  }
